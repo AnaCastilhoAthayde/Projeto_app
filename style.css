@@ -458,3 +458,111 @@ button:hover, .nav-menu a:hover {
 button:active, .nav-menu a:active {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
+
+/* ===========================================================
+RESPONSIVIDADE EXTRA – MELHORIAS PARA TELAS PEQUENAS
+(colocar no final do style.css)
+=========================================================== */
+
+/* ===== Ajuste geral ===== */
+@media (max-width: 768px) {
+
+/* Reduz tamanho dos títulos e espaçamentos */
+.hero .title {
+font-size: 2.3rem;
+}
+
+.hero .subtitle {
+font-size: 1.2rem;
+padding: 0 15px;
+}
+
+.about-section h2,
+.team-section h2,
+.course-section h2 {
+font-size: 2rem;
+}
+
+.about-section p,
+.course-content p {
+font-size: 0.95rem;
+padding: 0 15px;
+}
+
+/* ===== MENU DE NAVEGAÇÃO (transforma em menu hamburguer) ===== */
+.nav-menu {
+position: fixed;
+padding: 15px 10px;
+}
+
+.nav-menu ul {
+flex-direction: column;
+gap: 15px;
+background: rgba(2, 21, 38, 0.95);
+position: absolute;
+top: 60px;
+left: 0;
+width: 100%;
+padding: 15px 0;
+display: none; /* escondido por padrão */
+}
+
+.nav-menu.active ul {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+position: absolute;
+right: 20px;
+top: 15px;
+font-size: 1.8rem;
+color: #fff;
+cursor: pointer;
+}
+
+/* Esconde os links originais do menu (mostrados pelo toggle) */
+.nav-menu ul.show {
+display: flex;
+}
+}
+
+/* ===== TELA MUITO PEQUENA (CELULARES ≤ 480px) ===== */
+@media (max-width: 480px) {
+.about-grid,
+.team-grid,
+.contatos-grid {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.team-card,
+.contato-card {
+max-width: 90%;
+}
+
+.course-container {
+padding: 20px;
+}
+
+.course-content h2 {
+font-size: 1.8rem;
+}
+
+.course-content p {
+font-size: 0.9rem;
+}
+
+.scroll-down {
+bottom: 15px;
+}
+}
+
+/* ===== BOTÃO DO MENU (hamburguer) ===== */
+.menu-toggle {
+display: none;
+}
+
+
+
