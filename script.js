@@ -104,3 +104,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {passive: true});
   });
 });
+
+/* ===========================================================
+SCRIPT ADICIONAL – MENU RESPONSIVO (hamburguer)
+=========================================================== */
+
+// Cria o botão hamburguer dinamicamente
+document.addEventListener("DOMContentLoaded", () => {
+const navMenu = document.querySelector(".nav-menu");
+if (!navMenu) return;
+
+// Cria o ícone (☰)
+const toggle = document.createElement("div");
+toggle.classList.add("menu-toggle");
+toggle.innerHTML = "☰"; // símbolo hamburguer
+navMenu.appendChild(toggle);
+
+// Alterna visibilidade do menu
+toggle.addEventListener("click", () => {
+navMenu.classList.toggle("active");
+});
+
+// Fecha o menu ao clicar em um link
+const links = navMenu.querySelectorAll("a");
+links.forEach(link => {
+link.addEventListener("click", () => {
+navMenu.classList.remove("active");
+});
+});
+});
