@@ -35,7 +35,7 @@ O site foi desenvolvido com as seguintes tecnologias:
 
 ## 🚀 Acesse o Site
 
-🔗 **Link do site:** [Adicione aqui o link do projeto online](https://anacastilhoathayde.github.io/Projeto_app/)
+🔗 **Link do site:** [Clique aqui para acessar o site](https://anacastilhoathayde.github.io/Projeto_app/)
 
 ---
 
